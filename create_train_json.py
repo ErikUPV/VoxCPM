@@ -12,7 +12,7 @@ df = pd.read_csv(args.input_csv)
 train_jsons = []
 
 for index, row in df.iterrows():
-    train_json = {"audio" : args.prefix + row["audio_file"], "text" : row["transcription"], "duration" : row["duration"]}
+    train_json = {"audio" : args.prefix + row["audio_file"], "text" : row["text"], "duration" : row["duration"]}
     train_jsons.append(train_json)
 
 with open('train.json', 'w') as f:
