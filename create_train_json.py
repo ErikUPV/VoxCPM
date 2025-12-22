@@ -15,5 +15,5 @@ for index, row in df.iterrows():
     train_json = {"audio" : args.prefix + row["audio_file"], "text" : row["text"], "duration" : row["duration"]}
     train_jsons.append(train_json)
 
-with open('train.json', 'w') as f:
+with open('train.json', 'w', encoding='utf-8') as f:
     json.dump(train_jsons, f, indent=4)
