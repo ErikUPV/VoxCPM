@@ -16,4 +16,4 @@ for index, row in df.iterrows():
     train_jsons.append(train_json)
 
 with open('train.json', 'w', encoding='utf-8') as f:
-    json.dump(train_jsons, f, indent=4)
+    json.dump(train_jsons, f, indent=4, ensure_ascii=False)
